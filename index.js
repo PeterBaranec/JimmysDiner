@@ -68,18 +68,3 @@ function renderSelectedItems(selectedItems) {
 
 document.getElementById("shopping-list").innerHTML =
   renderSelectedItems(selectedItems);
-
-// const addButtons = document.querySelectorAll(".button_plus");
-// let cart = [];
-
-// addButtons.forEach((btn) => {
-//   btn.addEventListener("click", function () {
-//     menuArray.map((menu) => {
-//       if (menu.id == btn.dataset.item) {
-//         cart.push(menu);
-//         console.log(cart);
-//       }
-//     });
-//     renderShoppingCart(cart);
-//   });
-// });
