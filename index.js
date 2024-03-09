@@ -51,6 +51,7 @@ function renderSelectedItems(selectedItems) {
   const selectedItemsHTML = selectedItems
     .map((item) => {
       return `
+      <h1>Cart</h1>
       <div class="selected-item">
         <img class="menu__icon" src="./images/${item.image}" alt="${item.name}">
         <div>
