@@ -56,6 +56,7 @@ function renderSelectedItems(selectedItems) {
         <img class="menu__icon" src="./images/${item.image}" alt="${item.name}">
         <div>
           <h1 class="menu__title">${item.name}</h1>
+           <a id="item-button" data-item="${item.id}">Remove</a>
           <p class="menu__ingredients">${item.ingredients}</p>
           <p class="menu__price">${item.price}</p>
         </div>
