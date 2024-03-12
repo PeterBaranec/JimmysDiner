@@ -107,8 +107,6 @@ addButtonElements.forEach((button) => {
     const selectedItem = menuArray.find((item) => item.id == itemId);
     if (selectedItem) {
       selectedItems.push(selectedItem);
-      document.getElementById("hidden").classList.remove("hidden");
-      document.getElementById("summary").classList.remove("hidden");
       updateSelectedItems();
     }
   });
