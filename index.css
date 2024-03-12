@@ -5,8 +5,9 @@
     box-sizing: border-box;
 }
 
-/* Remove default margin */
+/* Remove default margin, padding */
 body,
+a,
 h1,
 h2,
 h3,
@@ -17,6 +18,7 @@ blockquote,
 dl,
 dd {
     margin: 0;
+    padding: 0;
 }
 
 
@@ -79,6 +81,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .header {
@@ -126,4 +129,38 @@ select {
     width: 4px;
     height: 50%;
     background: lightgray;
+}
+
+.shopping-list__cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35em;
+}
+
+.shopping-list__title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.item-button {
+    color: rgba(0, 0, 0, 0.622);
+    margin-top: 0.2rem;
+    font-size: 1rem;
+}
+
+.summary__price {
+    width: 35em;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-btn {
+    cursor: pointer;
 }
