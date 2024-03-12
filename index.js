@@ -70,13 +70,7 @@ function addRemoveEventListeners() {
       const index = selectedItems.findIndex((item) => item.id == itemId);
       if (index !== -1) {
         selectedItems.splice(index, 1);
-        document.getElementById("shopping-list").innerHTML =
-          renderSelectedItems(selectedItems);
-        document.getElementById("summary").innerHTML =
-          calculateTotalPrice(selectedItems);
-        // After removing item, reattach event listeners
-        addRemoveEventListeners();
-        toggleOrderVisibility();
+        updateSelectedItems();
       }
     });
   });
