@@ -82,6 +82,7 @@ function addRemoveEventListeners() {
   });
 }
 
+//Function to update HTML if there is no item in selectedItems array
 function toggleOrderVisibility() {
   const hidden = document.getElementById("hidden");
   const summary = document.getElementById("summary");
