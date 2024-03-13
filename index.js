@@ -80,12 +80,15 @@ function addRemoveEventListeners() {
 function toggleOrderVisibility() {
   const hidden = document.getElementById("hidden");
   const summary = document.getElementById("summary");
+  const summaryBtn = document.getElementById("summary-btn");
   if (selectedItems.length > 0) {
     hidden.classList.remove("hidden");
     summary.classList.remove("hidden");
+    summaryBtn.classList.remove("hidden");
   } else {
     hidden.classList.add("hidden");
     summary.classList.add("hidden");
+    summaryBtn.classList.add("hidden");
   }
 }
 
@@ -110,6 +113,11 @@ addButtonElements.forEach((button) => {
       updateSelectedItems();
     }
   });
+});
+
+const summaryBtn = document.getElementById("summary-btn");
+summaryBtn.addEventListener("click", function () {
+  console.log("clicked");
 });
 
 // Initially attach event listeners to Remove buttons
