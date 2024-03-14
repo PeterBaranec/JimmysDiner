@@ -153,8 +153,8 @@ select {
     font-size: 0.8rem;
 }
 
-
 .summary__price {
+    border-top: 1px solid lightgray;
     width: 35em;
     margin-top: 2rem;
     display: flex;
@@ -173,7 +173,22 @@ select {
     margin-top: 2rem;
 }
 
+.blur {
+    -webkit-filter: blur(10px);
+
+    filter: blur(10px);
+}
+
+
+.order__summary {
+    margin-top: 2rem;
+}
+
 .shopping-list__title {
+    font-size: 1.5rem;
+}
+
+.price-title {
     font-size: 1.5rem;
 }
 

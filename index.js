@@ -107,12 +107,14 @@ addButtonElements.forEach((button) => {
   });
 });
 
+//After clicking complete order show form
 const summaryBtn = document.getElementById("summary-btn");
 summaryBtn.addEventListener("click", function () {
   const form = document.getElementById("form");
   form.classList.remove("hidden");
 });
 
+//After clicking Pay button show messgae to the user
 const formBtn = document.getElementById("form-btn");
 formBtn.addEventListener("click", function () {
   const userName = document.getElementById("user-name").value;
@@ -121,6 +123,7 @@ formBtn.addEventListener("click", function () {
   updatePayment(userName);
 });
 
+//Render payment HTML
 function updatePayment(userName) {
   const orderSummary = document.getElementById("order-summary");
   orderSummary.innerHTML = `
