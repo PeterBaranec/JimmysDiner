@@ -147,11 +147,12 @@ select {
     display: none;
 }
 
-.item-button {
+.item-btn {
     color: rgba(0, 0, 0, 0.622);
     margin-top: 0.2rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
+
 
 .summary__price {
     width: 35em;
@@ -159,6 +160,21 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.summary__btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #16DC99;
+    padding: 0.6rem;
+    margin-top: 2rem;
+}
+
+.shopping-list__title {
+    font-size: 1.5rem;
 }
 
 .item-btn {
@@ -176,6 +192,32 @@ select {
     justify-content: center;
     text-decoration: none;
     color: #fff;
-    background-color: rgb(41, 144, 0);
-    padding: 0.4rem;
+    background-color: #16DC99;
+    padding: 0.6rem;
+    margin-top: 2rem;
+}
+
+input {
+    padding: 0.5rem;
+}
+
+.form-container {
+    position: fixed;
+    width: 20rem;
+    padding: 1rem 1rem;
+    background-color: aqua;
+}
+
+.form__title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.order-message {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    background-color: hsla(120, 100%, 28%, 0.544);
+    color: darkgreen;
 }

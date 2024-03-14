@@ -55,7 +55,7 @@ function calculateTotalPrice(selectedItems) {
   selectedItems.forEach((selectedItem) => (totalPrice += selectedItem.price));
   return `
     <div class="summary__price" id="summary-price">
-      <h1>Total price: </h1>
+      <h1 class="price-title">Total price: </h1>
       <p>${totalPrice}</p>
     </div>
   `;
@@ -78,18 +78,10 @@ function addRemoveEventListeners() {
 
 //Function to update HTML if there is no item in selectedItems array
 function toggleOrderVisibility() {
-  const hidden = document.getElementById("hidden");
-  const summary = document.getElementById("summary");
-  const summaryBtn = document.getElementById("summary-btn");
-  if (selectedItems.length > 0) {
-    hidden.classList.remove("hidden");
-    summary.classList.remove("hidden");
-    summaryBtn.classList.remove("hidden");
-  } else {
-    hidden.classList.add("hidden");
-    summary.classList.add("hidden");
-    summaryBtn.classList.add("hidden");
-  }
+  const orderSummary = document.getElementById("order-summary");
+  selectedItems.length > 0
+    ? orderSummary.classList.remove("hidden")
+    : orderSummary.classList.add("hidden");
 }
 
 // Function to update selected items and total price
@@ -117,8 +109,25 @@ addButtonElements.forEach((button) => {
 
 const summaryBtn = document.getElementById("summary-btn");
 summaryBtn.addEventListener("click", function () {
-  console.log("clicked");
+  const form = document.getElementById("form");
+  form.classList.remove("hidden");
 });
+
+const formBtn = document.getElementById("form-btn");
+formBtn.addEventListener("click", function () {
+  const userName = document.getElementById("user-name").value;
+  const form = document.getElementById("form");
+  form.classList.add("hidden");
+  updatePayment(userName);
+});
+
+function updatePayment(userName) {
+  const orderSummary = document.getElementById("order-summary");
+  orderSummary.innerHTML = `
+  <p class="order-message">Thanks, ${userName}! Your order is on its way!</p>
+  `;
+  return orderSummary;
+}
 
 // Initially attach event listeners to Remove buttons
 addRemoveEventListeners();
